@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Black button container */
+.ripple-btn {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+ 
+}
+
+/* Ripple circle */
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(195, 20, 20, 0.6);
+  border-radius: 50%;
+  animation: ripple-effect 0.8s ease-out;
+}
+
+/* Ripple animation */
+@keyframes ripple-effect {
+  to {
+    transform: scale(15);
+    opacity: 0.5;
+  }
+}
